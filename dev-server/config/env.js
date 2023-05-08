@@ -26,8 +26,8 @@ function setDevEnv(app) {
   app.use(cors()); // Enable Cross Origin Requests, since Vue.JS is on a different origin
   // Connection string from the local MongoDB/Compass - port 27017 is used by default
   // Can look like this: 'mongodb://localhost:27017/vue-db'
-  process.env.DB_URL = 'YOUR CONNECTION STRING FROM THE LOCAL MONGODB';
-  process.env.TOKEN_SECRET = 'YOUR SECRET STRING)';
+  process.env.DB_URL = 'YOUR MONGODB CONNECTION STRING FROM THE LOCAL DB';
+  process.env.TOKEN_SECRET = 'YOUR SRONG SECRET STRING HASH';
 }
 
 /**
@@ -37,7 +37,7 @@ function setDevEnv(app) {
 function setProdEnv(app) {
   process.env.NODE_ENV = 'production';
   process.env.DB_URL = 'YOUR MONGODB CONNECTION STRING FROM THE REAL DB';
-  process.env.TOKEN_SECRET = 'YOUR ANOTHER SECRET STRING)';
+  process.env.TOKEN_SECRET = 'YOUR ANOTHER SECRET STRING';
   app.use(bodyParser.json());
   app.use(express.static(__dirname + '/../../dist'));
 }

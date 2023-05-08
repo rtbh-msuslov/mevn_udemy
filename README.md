@@ -1,15 +1,15 @@
 # Isomorphic JavaScript with MEVN Stack
 
-This is the code repository for [Isomorphic JavaScript with MEVN Stack[Udemy Course]](https://www.udemy.com/course/full-stack-isomorphic-javascript-with-vuejs-nodejs) by [Packt].
+This is the code repository for [Isomorphic JavaScript with MEVN Stack[Udemy Course]](https://www.udemy.com/course/full-stack-isomorphic-javascript-with-vuejs-nodejs).
 ## About the Video Course
-Do you want to build scalable, high-performance web apps? Harness the power of the JavaScript ecosystem to run, build, and test your full-stack applications. This course will guide you in building a full-stack app using Isomorphic JavaScript frameworks. You'll build web applications using the MEVN Stack in JavaScript.
-This course takes you on an end-to-end journey, building on your basic skills and taking you to advanced skill set in no time with Vue.js while deploying enhanced web apps to a production environment.
+This course will guide you in building a full-stack app using Isomorphic JavaScript framework. You'll build a web application using the MEVN Stack in JavaScript.
+This course takes you on an end-to-end journey, building on your basic skills and taking you to advanced skill set in no time with Vue.js while deploying enhanced web app to a production environment.
 
-<H2>What You Will Learn</H2>
-<DIV class=book-info-will-learn-text>
+<H2>Course contents</H2>
+<DIV>
 <UL>
 <LI>Use Node.js to set up a project environment ready for MEVN development
-<LI>Create Single Page Applications using the Vue.JS command-line Interface Tool
+<LI>Create a Single Page Application using the Vue.JS command-line Interface Tool
 <LI>Manage application state with Vuex Library
 <LI>Deploy a production-ready application to the cloud (AWS)	
 <LI>Implement application routing with Vue.js Router
@@ -39,10 +39,14 @@ Node.js LTS 16.20.0 Installed
 
 ### Installing
 
-First, install all of the NodeJS dependencies (located in **package.json** file)
+Firstly, downgrade your Node.js version to v16.20.0 (you can use nvm for this).
+Secondary, install all of the NodeJS dependencies (located in **package.json** file)
 ```
 $ npm install
 ```
+If some package is missing, install it manually in addition.
+In /dev-server/config/env.js paste your Mongo DB connection strings (for local development and for production).
+In the same file paste some strong hash instead of the token_secret string placeholder.
 
 ## Development
 
@@ -51,11 +55,12 @@ To begin development, you must start the NodeJS Server and VueJS Server.
 
 ### Start mongod service
 You can search in Google how to install and run Mongo DB on your OS locally.<br>
-Example on Linux:
+Example on Linux (after installing Mongo DB) to start the deamon:
 
 ```
 $ sudo systemctl start mongod
 ```
+Additionally, for the better user experience I recommend to use <a href="https://www.mongodb.com/docs/compass/master/install/" target="_blank">Compass</a> - it is a GUI based tool (unline MongoDB Shell) to interact with local or remote MongoDB server and databases.
 
 ### Run all development scripts in one
 
